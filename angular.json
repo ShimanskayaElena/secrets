@@ -5,7 +5,11 @@
   "projects": {
     "angular-17": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -88,11 +92,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "f7d14b79-5627-4a7b-bbb8-507cc650b738"
+    "analytics": "f7d14b79-5627-4a7b-bbb8-507cc650b738",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
