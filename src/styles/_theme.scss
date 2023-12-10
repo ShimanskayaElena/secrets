@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import "./light-theme-color";
+@import "./dark-theme-color";
+
+$light-primary: mat.define-palette($light-gray);
+$light-accent: mat.define-palette($light-gold, A200, A100, A400);
+$light-warn: mat.define-palette($light-red);
+
+$dark-primary: mat.define-palette($dark-gray);
+$dark-accent: mat.define-palette($dark-gold, A200, A100, A400);
+$dark-warn: mat.define-palette($dark-red);
+
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+  )
+));
+
+@include mat.core-theme($light-theme);
+@include mat.all-component-themes($light-theme);
+
+@media (prefers-color-scheme: dark) {
+  @include mat.core-color($dark-theme);
+  @include mat.all-component-themes($dark-theme);
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
