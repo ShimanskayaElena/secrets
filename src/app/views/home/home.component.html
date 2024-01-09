@@ -1,0 +1,20 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    opened="!mobileQuery.matches"
+    (keydown.escape)="sidenav.close()"
+    disableClose
+  >
+      @for (item of fillerNav; track item) {
+        <div>{{ item }}</div>
+      }
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <div>
+      <button mat-button (click)="onToggleSidenav($event)">Open menu</button>
+    </div>
+      @for (content of fillerContent; let i = $index; track content) {
+        <div>{{ content}} - {{ i }}</div>
+      }
+  </mat-sidenav-content>
+</mat-sidenav-container>

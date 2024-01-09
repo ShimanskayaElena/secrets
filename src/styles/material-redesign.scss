@@ -8,4 +8,56 @@
     min-height: var(--button-height);
     border-radius: var(--button-border-radius);
   }
+
+  // end Buttons
+
+  // ** MatSidenavModule **
+  // *******************************************
+  .mat-drawer-container {
+    .mat-drawer-backdrop.mat-drawer-shown {
+      background-color: transparent;
+    }
+  }
+
+  .mat-drawer-inner-container, mat-sidenav-content {
+    overflow-y: scroll;
+  }
+
+  mat-sidenav-content::-webkit-scrollbar {
+    width: 0;
+  }
+
+  mat-sidenav-content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  mat-sidenav-content::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .mat-drawer-inner-container::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .mat-drawer-inner-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll);
+  }
+
+  .mat-drawer-inner-container::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  /* firefox */
+
+  .mat-drawer-inner-container  {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scroll) transparent;
+    scrollbar-gutter: stable;
+  }
+
+  mat-sidenav-content {
+    scrollbar-width: none;
+  }
+
+  // ** end MatSidenavModule **
 }

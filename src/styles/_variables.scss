@@ -1,10 +1,40 @@
 :root {
+
+  --electric-violet: oklch(53.18% 0.28 296.97);
+  --vivid-pink: oklch(69.02% 0.277 332.77);
+  --orange-red: oklch(63.32% 0.24 31.68);
+
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+
+  --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+  );
+
+  --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+  );
+
+  --color-white: #ffffff;
+  --color-scroll: #ebebed;
+
+  --mat-sidenav-content-background-color: #ffffff;
+
   --font-size-default: 16px;
   --line-height-default: 20px;
   --font-weight-default: 400;
 
-  --color-white: #ffffff;
-
   --button-height: 52px;
   --button-border-radius: 36px;
+
+  // custom
+  --sidenav-container-padding: 16px;
+  --sidenav-content-padding: 16px;
 }

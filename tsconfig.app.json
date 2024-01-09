@@ -2,6 +2,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@header/*": ["src/app/views/header/*"],
+      "@home/*": ["src/app/views/home/*"]
+    },
     "outDir": "./out-tsc/app",
     "types": []
   },

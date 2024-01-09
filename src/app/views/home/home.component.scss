@@ -1,0 +1,28 @@
+.mat-drawer-container {
+  height: 100%;
+  padding: 0 var(--sidenav-container-padding);
+  overflow: visible;
+}
+
+.mat-drawer-side {
+  border-right-width: 0;
+}
+
+.mat-drawer:not(.mat-drawer-side) {
+  box-shadow: none;
+}
+
+mat-sidenav {
+  width: calc(100vw - var(--sidenav-container-padding) - var(--sidenav-container-padding));
+}
+
+@media (min-width: 601px) {
+  mat-sidenav {
+    width: 300px;
+  }
+
+  mat-sidenav-content {
+    padding-left: var(--sidenav-content-padding);
+  }
+}
+
