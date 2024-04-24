@@ -1,0 +1,42 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav (click)="onCloseSidenav($event)">
+    <nav>
+      <cdk-accordion multi="true">
+        @for (item of menu; track item) {
+          <mat-expansion-panel
+            #expansionPanel
+            (click)="expansionPanel.expanded = item.children ? expansionPanel.expanded : true "
+            [ngClass]="{ empty: !item.children }"
+            hideToggle="{{ !item.children }}"
+          ><!-- (click)="expansionPanel.expanded = item.children ? expansionPanel.expanded : true " -->
+            <mat-expansion-panel-header [routerLink]="item.route" routerLinkActive="active" (click)="onClickMenu($event, item)">
+              <mat-panel-title>
+                {{ item.title }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            @if (item.children ) {
+              @for (elem of item.children; track elem) {
+                <div [routerLink]="elem.route" routerLinkActive="active">
+                  {{ elem.title }}
+                </div>
+              }
+            }
+          </mat-expansion-panel>
+        }
+      </cdk-accordion>
+    </nav>
+<!--      @for (item of fillerNav; track item) {-->
+<!--        <div>{{ item }}</div>-->
+<!--      }-->
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div (click)="updateCriteria('Барановичи', 'Минск')">Store</div>
+    <div>{{ from() }}</div>
+    <div>{{ to() }}</div>
+
+    <router-outlet></router-outlet>
+<!--      @for (content of fillerContent; let i = $index; track content) {-->
+<!--        <div class="item-container">{{ content}} - {{ i }}</div>-->
+<!--      }-->
+  </mat-sidenav-content>
+</mat-sidenav-container>

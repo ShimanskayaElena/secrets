@@ -1,6 +1,16 @@
 <div class="header-container">
+  @if (store.isMobilePhone()) {
+    <mat-icon class="md-24 icon-menu" (click)="onOpenMenu($event)" fontIcon="menu"></mat-icon>
+  }
+
   <a routerLink="/"><h1 class="header__title">{{ title }}</h1></a>
-<!--  <p>Congratulations! Your app is running. 🎉</p>-->
+
+  @if (store.theme() === 'LIGHT') {
+    <mat-icon (click)="toggleDarkTheme($event, 'DARK')" color="primary" fontIcon="bedtime"></mat-icon>
+  } @else {
+    <mat-icon (click)="toggleDarkTheme($event, 'LIGHT')" color="primary" fontIcon="sunny"></mat-icon>
+  }
+
   <div class="divider-vertical"></div>
   <div class="social-links">
     <a

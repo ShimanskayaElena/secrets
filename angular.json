@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-17": {
+    "secrets": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-17",
+            "outputPath": "dist/secrets",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

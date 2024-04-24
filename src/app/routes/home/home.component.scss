@@ -14,15 +14,32 @@
 
 mat-sidenav {
   width: calc(100vw - var(--sidenav-container-padding) - var(--sidenav-container-padding));
+  background-color:  #fbf4b5;
 }
 
-@media (min-width: 601px) {
+mat-sidenav-content {
+  background-color: #ceced1;
+
+  & .sidenav-content-button {
+    display: block;
+  }
+}
+
+.active {
+  color: var(--vivid-pink);
+}
+
+@media (min-width: 600px) {
   mat-sidenav {
     width: 300px;
   }
 
   mat-sidenav-content {
     padding-left: var(--sidenav-content-padding);
+
+    & .sidenav-content-button {
+      display: none;
+    }
   }
 }
 
