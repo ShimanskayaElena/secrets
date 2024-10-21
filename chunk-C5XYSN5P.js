@@ -1,0 +1,1 @@
+import{Hb as r,Lb as a,ca as n,gc as d,qb as o,rb as i}from"./chunk-KT2RW3EP.js";var c=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-child"]],standalone:!0,features:[a],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"p"),r(1,"child works!"),i())},dependencies:[d]})}}return e})();export{c as ChildComponent};
