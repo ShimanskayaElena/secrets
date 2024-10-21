@@ -17,7 +17,7 @@
             @if (item.children ) {
               @for (elem of item.children; track elem) {
                 <div [routerLink]="elem.route" routerLinkActive="active">
-                  {{ elem.title }}
+                  <span> {{ elem.title }} </span>
                 </div>
               }
             }

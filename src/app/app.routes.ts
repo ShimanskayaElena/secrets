@@ -21,9 +21,9 @@ export const routes: Routes = [
         loadComponent: () => import('./routes/counters/counters.component').then(m => m.CountersComponent)
       },
       {
-        path: ExampleRoutes.Parent,
-        title: 'Parent',
-        loadComponent: () => import('./routes/parent/parent.component').then(m => m.ParentComponent)
+        path: ExampleRoutes.HostElementBinding,
+        title: 'Host Element Binding',
+        loadComponent: () => import('@routes/host-element-binding/host-element-binding.component').then(m => m.HostElementBindingComponent)
       },
       {
         path: ExampleRoutes.Child,

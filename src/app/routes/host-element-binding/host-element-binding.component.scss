@@ -1,0 +1,21 @@
+button.disabled {
+  border-color: #e7e7e7;
+  background-color: #e7e7e7;
+  color: #999;
+}
+
+fieldset.valid {
+  border-color: #00deb7;
+}
+
+fieldset.invalid {
+  border-color: #ff495d;
+}
+
+:host(.valid) {
+  color: #00deb7;
+}
+
+:host(.valid) legend {
+  color: #00deb7;
+}

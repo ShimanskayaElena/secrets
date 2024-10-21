@@ -110,6 +110,10 @@
     }
   }
 
+  .mat-expansion-panel.mat-expanded .mat-expansion-panel-content .mat-expansion-panel-body div span {
+    cursor: pointer;
+  }
+
   // ** end MatExpansionModule **
 
 

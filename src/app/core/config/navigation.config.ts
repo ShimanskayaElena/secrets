@@ -15,7 +15,7 @@ export const NavigationConfig: NavigationItem[] = [
     ]},
   { title: 'Singleton', route: ExampleRoutes.Singleton },
   { title: 'Example', children: [
-      { title: 'Parent', route: ExampleRoutes.Parent },
+      { title: 'Host Element Binding', route: ExampleRoutes.HostElementBinding },
       { title: 'Child', route: ExampleRoutes.Child }
     ]},
   { title: 'Singleton Second', route: ExampleRoutes.SingletonSecond },

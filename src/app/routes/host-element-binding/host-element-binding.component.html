@@ -1,0 +1,16 @@
+<form>
+  <fieldset [ngClass]="emailControl.invalid ? 'invalid' : 'valid'">
+    <legend>Subscribe Today</legend>
+    <p>Enter your email address to subscribe to our newsletter</p>
+    <section>
+      <label for="email"></label>
+      <input
+        type="email"
+        id="email"
+        [formControl]="emailControl"
+        autocomplete="off"
+      />
+      <button appHostListener (buttonClick)="onSubmit($event)" [class.disabled]="emailControl.invalid">Subscribe</button>
+    </section>
+  </fieldset>
+</form>

@@ -4,7 +4,7 @@ export enum AnimationRoutes {
 }
 
 export enum ExampleRoutes {
-  Parent = 'parent',
+  HostElementBinding = 'host-element-binding',
   Child = 'child',
   Singleton = 'singleton',
   SingletonSecond = 'singleton-second',
