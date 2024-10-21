@@ -133,7 +133,9 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options" : {
-            "buildTarget" : "secrets:build:production"
+            "baseHref" : "https://shimanskayaelena.github.io/secrets/",
+            "buildTarget" : "secrets:build:production",
+            "repo": "https://github.com/ShimanskayaElena/secrets.git"
           }
         }
       }
