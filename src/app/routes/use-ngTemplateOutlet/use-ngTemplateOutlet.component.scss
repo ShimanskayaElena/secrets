@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  width: 50vw;
+
+  &-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.button-span {
+  display: inline-block;
+  padding-right: 20px;
+
+  & .subtitle {
+    font-size: 10px;
+    color: #8c8d95;
+  }
+}

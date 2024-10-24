@@ -1,0 +1,36 @@
+<div class="container">
+  <ng-template #button let-title="title" let-subtitle="subtitle" let-icon="icon">
+    <button mat-fab extended>
+      <div class="container-button">
+      <span class="button-span">
+        <div>{{ title }}</div>
+        @if (subtitle) {
+        <div class="subtitle">{{ subtitle}}</div>
+        }
+      </span>
+        <mat-icon>{{ icon }}</mat-icon>
+      </div>
+    </button>
+  </ng-template>
+
+  <div (click)="onSingUp($event)">
+    <ng-container *ngTemplateOutlet="button; context: {
+                   title: 'Sign Up',
+                   subtitle: 'And Save Today!',
+                   icon: 'person'
+                  }"
+    >
+    </ng-container>
+  </div>
+
+
+  <div (click)="onSingIn($event)">
+    <ng-container *ngTemplateOutlet="button; context: {
+                    title: 'Sign In',
+                    icon: 'login'
+                  }"
+    >
+    </ng-container>
+  </div>
+
+</div>

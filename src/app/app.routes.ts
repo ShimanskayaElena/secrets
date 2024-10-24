@@ -26,9 +26,9 @@ export const routes: Routes = [
         loadComponent: () => import('@routes/host-element-binding/host-element-binding.component').then(m => m.HostElementBindingComponent)
       },
       {
-        path: ExampleRoutes.Child,
-        title: 'Child',
-        loadComponent: () => import('./routes/child/child.component').then(m => m.ChildComponent)
+        path: ExampleRoutes.UseNgTemplateOutlet,
+        title: 'Use ngTemplateOutlet',
+        loadComponent: () => import('@routes/use-ngTemplateOutlet/use-ngTemplateOutlet.component').then(m => m.UseNgTemplateOutletComponent)
       },
       {
         path: ExampleRoutes.Singleton,

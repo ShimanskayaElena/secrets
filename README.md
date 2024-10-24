@@ -9,6 +9,12 @@
 Посмотреть то, как всё это выглядит в реальности, можно [здесь](https://shimanskayaelena.github.io/secrets/).
 Дизайн проекта разработан таким образом, чтобы подчеркнуть все тонкости и нюансы созданных компонентов. Его легко можно кастомизировать под свои нужды.
 
+# Реализованная функциональность
+
+Использование директивы [ngTemplateOutlet](https://shimanskayaelena.github.io/secrets/use-ngTemplateOutlet)
+
+Использование свойства [host](https://shimanskayaelena.github.io/secrets/host-element-binding) декоратора @Component вместо устаревших @HostBinding и @HostListener. 
+
 ## Обратная связь
 
 Буду весьма признательна за Ваши замечания и предложения по поводу моего проекта. Охотно отвечу на все Ваши вопросы в [Telegram](https://t.me/ElenaShimanskaya).

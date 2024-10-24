@@ -14,9 +14,9 @@ export const NavigationConfig: NavigationItem[] = [
       { title: 'Счётчики', route: AnimationRoutes.Counters },
     ]},
   { title: 'Singleton', route: ExampleRoutes.Singleton },
-  { title: 'Example', children: [
+  { title: 'Маленькие хитрости', children: [
       { title: 'Host Element Binding', route: ExampleRoutes.HostElementBinding },
-      { title: 'Child', route: ExampleRoutes.Child }
+      { title: 'Use ngTemplateOutlet', route: ExampleRoutes.UseNgTemplateOutlet }
     ]},
   { title: 'Singleton Second', route: ExampleRoutes.SingletonSecond },
 ];
