@@ -6,6 +6,6 @@ export enum AnimationRoutes {
 export enum ExampleRoutes {
   HostElementBinding = 'host-element-binding',
   UseNgTemplateOutlet = 'use-ngTemplateOutlet',
-  Singleton = 'singleton',
+  Highlight = 'highlight',
   SingletonSecond = 'singleton-second',
 }

@@ -18,7 +18,7 @@ mat-sidenav {
 }
 
 mat-sidenav-content {
-  background-color: #ceced1;
+  // background-color: #ceced1;  // для тестирования
 
   & .sidenav-content-button {
     display: block;
@@ -36,6 +36,7 @@ mat-sidenav-content {
 
   mat-sidenav-content {
     padding-left: var(--sidenav-content-padding);
+    padding-right: var(--sidenav-content-padding);
 
     & .sidenav-content-button {
       display: none;

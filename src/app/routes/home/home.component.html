@@ -30,11 +30,12 @@
 <!--      }-->
   </mat-sidenav>
   <mat-sidenav-content>
+    <router-outlet></router-outlet>
+
     <div (click)="updateCriteria('Барановичи', 'Минск')">Store</div>
     <div>{{ from() }}</div>
     <div>{{ to() }}</div>
 
-    <router-outlet></router-outlet>
 <!--      @for (content of fillerContent; let i = $index; track content) {-->
 <!--        <div class="item-container">{{ content}} - {{ i }}</div>-->
 <!--      }-->

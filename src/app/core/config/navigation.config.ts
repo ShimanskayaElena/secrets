@@ -13,7 +13,7 @@ export const NavigationConfig: NavigationItem[] = [
       { title: 'Счётчик', route: AnimationRoutes.Counter },
       { title: 'Счётчики', route: AnimationRoutes.Counters },
     ]},
-  { title: 'Singleton', route: ExampleRoutes.Singleton },
+  { title: 'Выделить ссылку в шаблоне', route: ExampleRoutes.Highlight },
   { title: 'Маленькие хитрости', children: [
       { title: 'Host Element Binding', route: ExampleRoutes.HostElementBinding },
       { title: 'Use ngTemplateOutlet', route: ExampleRoutes.UseNgTemplateOutlet }

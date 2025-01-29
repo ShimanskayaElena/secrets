@@ -31,9 +31,9 @@ export const routes: Routes = [
         loadComponent: () => import('@routes/use-ngTemplateOutlet/use-ngTemplateOutlet.component').then(m => m.UseNgTemplateOutletComponent)
       },
       {
-        path: ExampleRoutes.Singleton,
-        title: 'Singleton',
-        loadComponent: () => import('./routes/singleton/singleton.component').then(m => m.SingletonComponent)
+        path: ExampleRoutes.Highlight,
+        title: 'Highlight',
+        loadComponent: () => import('./routes/highlight/highlight.component').then(m => m.HighlightComponent)
       },
       {
         path: ExampleRoutes.SingletonSecond,
