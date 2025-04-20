@@ -1,6 +1,6 @@
 import { inject, InjectionToken } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MenuStatusState } from '@core/store/menu-status.feature';
+import { MenuStatusState } from '../store/menu-status.feature';
 
 export const MENU_STATUS = new InjectionToken<MenuStatusState>(
   'defining side menu mode',

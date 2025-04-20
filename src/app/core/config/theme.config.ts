@@ -1,7 +1,7 @@
 import { inject, InjectionToken } from '@angular/core';
 import { WINDOW } from './window.config';
 import { ThemeStatusState, ThemeColor } from '../store/theme-status.feature';
-import { StorageService } from '@shared/services/storage.service';
+import { StorageService } from '../../shared/services/storage.service';
 
 export const THEME = new InjectionToken<ThemeStatusState>(
   'determines which theme the user has selected on his device',

@@ -2,7 +2,7 @@ import { Component, inject,  OnInit } from '@angular/core';
 import { ViewportScroller, CommonModule } from '@angular/common';
 import { RouterLink, Router, ActivatedRoute, NavigationEnd  } from '@angular/router';
 
-import { AnchorDirective } from '@shared/domain/anchor.directive';
+import { AnchorDirective } from '../../shared/domain/anchor.directive';
 
 @Component({
   selector: 'app-singleton',

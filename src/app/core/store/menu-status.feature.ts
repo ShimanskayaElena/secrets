@@ -1,6 +1,6 @@
 import { signalStoreFeature, withState, withMethods, patchState, type, withHooks, getState } from '@ngrx/signals';
 import { inject, effect } from '@angular/core';
-import { MENU_STATUS } from '@core/config/menu.config';
+import { MENU_STATUS } from '../config/menu.config';
 
 export type MenuStatusState = {
   isOpenMenu: boolean;

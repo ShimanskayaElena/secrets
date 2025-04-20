@@ -2,9 +2,9 @@ import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { AppStore } from '@core/store/app.store';
-import { ThemeColor } from '@core/store/theme-status.feature';
-import { StorageService } from '@shared/services/storage.service';
+import { AppStore } from '../store/app.store';
+import { ThemeColor } from '../store/theme-status.feature';
+import { StorageService } from '../../shared/services/storage.service';
 
 @Component({
   selector: 'app-header',

@@ -7,8 +7,8 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
 
-import { AppStore } from '@core/store/app.store';
-import { NavigationConfig, NavigationItem } from '@core//config/navigation.config';
+import { AppStore } from '../../core/store/app.store';
+import { NavigationConfig, NavigationItem } from '../../core/config/navigation.config';
 
 @Component({
   selector: 'app-home',

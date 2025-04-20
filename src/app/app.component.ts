@@ -1,9 +1,9 @@
-import { Component, inject, effect } from '@angular/core';
+import { Component, inject, effect, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
-import { HeaderComponent } from '@core/header/header.component';
-import { AppStore } from '@core/store/app.store';
+import { HeaderComponent } from './core/header/header.component';
+import { AppStore } from './core/store/app.store';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -11,18 +11,31 @@ import { DOCUMENT } from '@angular/common';
   standalone: true,
   imports: [ CommonModule, RouterOutlet, HeaderComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
 
   private readonly store = inject(AppStore);
   private readonly document: Document = inject(DOCUMENT);
-
+  private prefersDarkScheme: MediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
 
   constructor() {
     effect(() => {
       this.document.body.classList.toggle('dark-theme', this.store.theme() === 'DARK');
     });
+  }
+
+  ngOnInit() {
+    this.handleThemeChange(this.prefersDarkScheme);
+    this.prefersDarkScheme.addEventListener('change', (e) => this.handleThemeChange(e));
+  }
+
+  ngOnDestroy() {
+    this.prefersDarkScheme?.removeEventListener('change', (e) => this.handleThemeChange(e));
+  }
+
+  private handleThemeChange(e: MediaQueryList | MediaQueryListEvent) {
+    this.store.setTheme(e.matches ? 'DARK' : 'LIGHT');
   }
 }
 

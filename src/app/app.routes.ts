@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { AnimationRoutes, ExampleRoutes } from '@core/config/routes.config';
-import { HomeComponent } from '@routes/home/home.component';
-import { PageNotFoundComponent } from '@routes/page-not-found/page-not-found.component';
-import { SingletonSecondComponent } from '@routes/singleton-second/singleton-second.component';
+import { AnimationRoutes, ExampleRoutes } from './core/config/routes.config';
+import { HomeComponent } from './routes/home/home.component';
+import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
+import { SingletonSecondComponent } from './routes/singleton-second/singleton-second.component';
 
 
 export const routes: Routes = [
@@ -23,12 +23,12 @@ export const routes: Routes = [
       {
         path: ExampleRoutes.HostElementBinding,
         title: 'Host Element Binding',
-        loadComponent: () => import('@routes/host-element-binding/host-element-binding.component').then(m => m.HostElementBindingComponent)
+        loadComponent: () => import('./routes/host-element-binding/host-element-binding.component').then(m => m.HostElementBindingComponent)
       },
       {
         path: ExampleRoutes.UseNgTemplateOutlet,
         title: 'Use ngTemplateOutlet',
-        loadComponent: () => import('@routes/use-ngTemplateOutlet/use-ngTemplateOutlet.component').then(m => m.UseNgTemplateOutletComponent)
+        loadComponent: () => import('./routes/use-ngTemplateOutlet/use-ngTemplateOutlet.component').then(m => m.UseNgTemplateOutletComponent)
       },
       {
         path: ExampleRoutes.Highlight,
