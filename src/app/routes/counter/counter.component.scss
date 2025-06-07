@@ -1,3 +1,28 @@
 :host {
   padding: 0 20px;
 }
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: calc(100vw - var(--mat-sidenav-width));
+}
+
+.container-animation {
+  font-size: 48px;
+  font-weight: 600;
+  padding: 50px;
+  background-color: transparent;
+}
+
+.container__button {
+  margin: 60px 0;
+}
+
+button {
+  font-size: 28px;
+  border-radius: 5px;
+}

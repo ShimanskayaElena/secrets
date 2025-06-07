@@ -1,4 +1,15 @@
-<p>counter works!</p>
-<!--@for (content of fillerContent; let i = $index; track content) {-->
-<!--  <div class="item-container">{{ content}} - {{ i }}</div>-->
-<!--}-->
+<div class="container">
+    <div
+      class="container-animation"
+      [@balanceAnimation]="counter()"
+      (@balanceAnimation.start)="onAnimationEvent($event)"
+      (@balanceAnimation.done)="onAnimationEvent($event)"
+    >
+      Balance Animation
+    </div>
+
+    <div class="container__button">
+        <button type="button" (click)="toggleVisibility()">Start / End</button>
+    </div>
+
+</div>

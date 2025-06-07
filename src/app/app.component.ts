@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.prefersDarkScheme?.removeEventListener('change', (e) => this.handleThemeChange(e));
   }
 
-  private handleThemeChange(e: MediaQueryList | MediaQueryListEvent) {
+private handleThemeChange(e: MediaQueryList | MediaQueryListEvent): void {
     this.store.setTheme(e.matches ? 'DARK' : 'LIGHT');
   }
 }
